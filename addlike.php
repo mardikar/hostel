@@ -1,5 +1,6 @@
 <?php
 if(!empty($_POST["pid"])) {
+	echo "yes";
 require_once("config.php");
 $db_handle = new ConfigController();
     
