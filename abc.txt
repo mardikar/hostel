@@ -1,0 +1,64 @@
+<?php
+require_once ("config.php");
+$db_handle = new ConfigController();
+session_start();
+
+$fName = $_POST['fname'];
+$nameError ="";
+if (!preg_match("/^[a-zA-Z ]*$/", $fName)) {
+	$nameError = "Only letters and white space allowed";
+}
+$collegeError = "";
+$college = $_POST['college'];
+if (!preg_match("/^[a-zA-Z ]*$/", $college)) {
+	$collegeError = "Only letters and white space allowed";
+}
+
+$branch = $_POST['branch'];
+$branchError = "";
+if (!preg_match("/^[a-zA-Z ]*$/", $branch)) {
+	$branchError = "Only letters and white space allowed";
+}
+
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+$gender = $_POST['radio'];
+
+if (filesize($_FILES['abc']['tmp_name']) != 0) {
+	$imagename = $_FILES['abc']['name'];
+	//Get the content of the image and then add slashes to it
+	$imagetmp = addslashes(file_get_contents($_FILES['abc']['tmp_name']));
+	$query = "INSERT INTO userdata VALUES (NULL, '$fName', '$college', '$branch', '$email', '$password','$gender','$imagetmp')";
+
+	//$query = "create database akash;";
+	if (mysql_query($query)) {
+
+		echo '<script type="text/javascript"> alert("Account Created!!!");
+	window.location="index.php";
+	</script>';
+
+	} else {
+		echo '<script type="text/javascript"> alert("This email is already registered");
+	window.location="index.php";
+	</script>';
+
+	}
+
+} else {
+	echo '<script type="text/javascript"> alert("Please upload image");
+	window.location="index.php";
+	</script>';
+
+}
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+mysql_close();
+?>
+
+

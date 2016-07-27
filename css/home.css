@@ -1,0 +1,90 @@
+.btn-likes {float:left; padding: 0px 5px;cursor:pointer;}
+.btn-likes input[type="button"]{width:20px;height:20px;border:0;cursor:pointer;}
+.like {background:url('../images/like.png')}
+.unlike {background:url('../images/unlike.png')}
+#photo {
+	height: 90px;
+	width: 60px;
+	display: inline;
+}
+.voting{
+    display: :inline;
+    margin-right: 0%;
+    float: left;
+    margin-left: 10px;
+}
+#thumb{
+   content: url("../images/grey_thumb.png");
+    height: 24px;
+    width: :24px;
+    
+}
+#link_like{
+    opacity: 1;
+}
+#count{
+        display: :inline;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: right;
+}
+.personal {
+	dispaly: inline;
+	margin-right: 50%;
+	float: right;
+}
+.post_header {
+	background-color: #673AB7;
+	color: white;
+}
+#data{
+    word-wrap: break-word; 
+}
+.post_data {
+	margin-left: 64px;
+	margin-right: 5%;
+}
+.post {
+	box-shadow: 0 5px 19px rgba(0,0,0,0.30), 0 5px 6px rgba(0,0,0,0.22);
+	width: 72%;
+	padding-bottom: 1%;
+	margin-bottom: 2%;
+	
+	margin-left: 11%
+}
+
+#aboutDescription {
+	width: 100%;
+	height: 100px;
+	margin-left: 1%;
+	margin-bottom: -4%;
+}
+
+#list {
+	margin-left: 3%;
+	padding-top: 3%
+}
+
+.demo-layout-transparent {
+	background-color: #C2185B;
+	background-size: auto 34px;
+	height: 16%;
+	position: fixed;
+}
+.demo-layout-transparent .mdl-layout__header, .demo-layout-transparent .mdl-layout__drawer-button {
+	/* This background is dark, so we set text to white. Use 87% black instead if
+	 your background is light. */
+	color: white;
+}
+.mdl-layout-title {
+	font-size: 48px;
+	float: left;
+	margin-left: -32px;
+	margin-top: 16px;
+}
+#loader-icon {
+	text-align: center;
+}
+#hideafter{
+	display: block;
+}
